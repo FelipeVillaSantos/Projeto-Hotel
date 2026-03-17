@@ -4,46 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Descanso - O seu refúgio de luxo</title>
-    
-    <!-- Carrega o Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Carrega a fonte Inter do Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Define a fonte Inter como padrão */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Melhora a acessibilidade do foco */
-        :focus-visible {
-            outline: 2px solid #3b82f6;
-            outline-offset: 2px;
-        }
-        /* Estilo para preservar a formatação do texto da API */
-        .gemini-response {
-            white-space: pre-wrap;
-            background-color: #f9fafb; /* bg-gray-50 */
-            border: 1px solid #e5e7eb; /* border-gray-200 */
-            border-radius: 0.5rem; /* rounded-lg */
-            padding: 1rem; /* p-4 */
-            font-family: monospace;
-            color: #374151; /* text-gray-700 */
-        }
-    </style>
+
+    <!-- Estilos próprios -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-white text-gray-700">
 
-    <!-- ===== Cabeçalho e Navegação ===== --><header class="bg-white/90 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50">
-        <!-- ... (código do cabeçalho existente) ... -->
+    <!-- ===== Cabeçalho e Navegação ===== -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo --><a href="#home" class="text-3xl font-bold text-blue-700">
+
+                <!-- Logo -->
+                <a href="#home" class="text-3xl font-bold text-blue-700">
                     Hotel Descanso
                 </a>
-                
-                <!-- Navegação Principal (Desktop) --><nav class="hidden md:flex space-x-8">
+
+                <!-- Navegação Principal (Desktop) -->
+                <nav class="hidden md:flex space-x-8">
                     <a href="#sobre" class="text-gray-600 hover:text-blue-700 font-medium transition-colors">Sobre</a>
                     <a href="#acomodacoes" class="text-gray-600 hover:text-blue-700 font-medium transition-colors">Acomodações</a>
                     <a href="#galeria" class="text-gray-600 hover:text-blue-700 font-medium transition-colors">Galeria</a>
@@ -51,16 +37,18 @@
                         Reservar Agora
                     </a>
                 </nav>
-                
-                <!-- Botão do Menu Móvel (Mobile) --><button id="burger-btn" class="md:hidden text-gray-700 hover:text-blue-700 focus:outline-none">
+
+                <!-- Botão do Menu Móvel -->
+                <button id="burger-btn" class="md:hidden text-gray-700 hover:text-blue-700 focus:outline-none">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
         </div>
-        
-        <!-- Menu Móvel (Mobile) --><div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
+
+        <!-- Menu Móvel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
             <nav class="flex flex-col p-4 space-y-2">
                 <a href="#sobre" class="block px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-700 font-medium">Sobre</a>
                 <a href="#acomodacoes" class="block px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-700 font-medium">Acomodações</a>
@@ -73,16 +61,18 @@
     </header>
 
     <main>
-        <!-- ===== Seção Hero (Home) ===== --><section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white pt-20">
-            <!-- Imagem de Fundo (Você pode usar uma das suas imagens se for uma fachada ou vista panorâmica) --><div class="absolute inset-0">
-                <img src="img/Fachada.jpg" 
-                     alt="[Imagem da fachada do Hotel Paraíso ao entardecer]" 
+
+        <!-- ===== Seção Hero ===== -->
+        <section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white pt-20">
+            <div class="absolute inset-0">
+                <img src="img/Fachada.jpg"
+                     alt="Fachada do Hotel Descanso"
                      class="w-full h-full object-cover"
                      onerror="this.src='https://placehold.co/1920x1080/6699cc/FFFFFF?text=Erro+ao+carregar+imagem'">
-                <!-- Sobreposição escura para legibilidade --><div class="absolute inset-0 bg-black/50"></div>
+                <div class="absolute inset-0 bg-black/50"></div>
             </div>
-            
-            <!-- Conteúdo do Hero --><div class="relative z-10 px-4">
+
+            <div class="relative z-10 px-4">
                 <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
                     Bem-vindo ao Hotel Descanso
                 </h1>
@@ -94,25 +84,26 @@
                 </a>
             </div>
         </section>
-        
-        <!-- ===== Seção Sobre ===== --><section id="sobre" class="py-20 lg:py-28 bg-gray-50">
-            <!-- ... (código da seção Sobre existente) ... -->
+
+        <!-- ===== Seção Sobre ===== -->
+        <section id="sobre" class="py-20 lg:py-28 bg-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <!-- Imagem Sobre - Usei a Imagem 5 (Recepção) aqui, pois combina com a ideia de "boas-vindas" do "Sobre Nós" --><div class="rounded-lg shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                        <img src="img/Fachada.jpg" 
-                             alt="[Imagem da recepção e lobby do hotel]" 
+
+                    <div class="rounded-lg shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="img/Fachada.jpg"
+                             alt="Recepção e lobby do hotel"
                              class="w-full h-full object-cover"
                              onerror="this.src='https://placehold.co/600x450/99aabb/FFFFFF?text=Erro+ao+carregar+imagem'">
                     </div>
-                    
-                    <!-- Texto Sobre --><div class="text-left">
+
+                    <div class="text-left">
                         <span class="text-blue-600 font-semibold uppercase tracking-wider">Sobre Nós</span>
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
                             O Refúgio Perfeito para Relaxar
                         </h2>
                         <p class="text-lg text-gray-600 mb-4">
-                            Localizado no coração de uma paisagem deslumbrante, o Hotel Paraíso oferece uma experiência inesquecível que combina luxo, conforto e um serviço de excelência.
+                            Localizado no coração de uma paisagem deslumbrante, o Hotel Descanso oferece uma experiência inesquecível que combina luxo, conforto e um serviço de excelência.
                         </p>
                         <p class="text-gray-600 mb-6">
                             Nossa missão é proporcionar momentos únicos de relaxamento e lazer, seja para uma escapadela romântica, férias em família ou uma viagem de negócios. Com instalações modernas e uma equipe dedicada, cuidamos de cada detalhe para que sua estadia seja perfeita.
@@ -125,8 +116,8 @@
             </div>
         </section>
 
-        <!-- ===== Seção Acomodações ===== --><section id="acomodacoes" class="py-20 lg:py-28 bg-white">
-            <!-- ... (código da seção Acomodações existente) ... -->
+        <!-- ===== Seção Acomodações ===== -->
+        <section id="acomodacoes" class="py-20 lg:py-28 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto mb-12">
                     <span class="text-blue-600 font-semibold uppercase tracking-wider">Acomodações</span>
@@ -137,11 +128,13 @@
                         Oferecemos diferentes tipos de quartos, todos equipados para garantir o seu máximo conforto e bem-estar.
                     </p>
                 </div>
-                
-                <!-- Grid de Quartos --><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Cartão Quarto Standard - Usei a Imagem 4 (quarto com várias camas) aqui como um "quarto familiar/standard"--><div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-xl">
-                        <img src="img/quarto2.jpg" 
-                             alt="[Imagem de um quarto standard aconchegante com várias camas]" 
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Quarto Standard -->
+                    <div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-xl">
+                        <img src="img/quarto2.jpg"
+                             alt="Quarto standard aconchegante com várias camas"
                              class="w-full h-56 object-cover"
                              onerror="this.src='https://placehold.co/600x400/b3cde0/FFFFFF?text=Erro+ao+carregar+imagem'">
                         <div class="p-6">
@@ -150,10 +143,11 @@
                             <span class="text-lg font-semibold text-blue-700">A partir de R$ 250/noite</span>
                         </div>
                     </div>
-                    
-                    <!-- Cartão Quarto Deluxe - (Não há uma imagem específica de "quarto deluxe", mantive um placeholder ou você pode usar uma das suítes se for mais simples) --><div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-xl">
-                        <img src="img/quarto.jpg" 
-                             alt="[Imagem de um quarto deluxe espaçoso com varanda]" 
+
+                    <!-- Quarto Deluxe -->
+                    <div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-xl">
+                        <img src="img/quarto.jpg"
+                             alt="Quarto deluxe espaçoso com varanda"
                              class="w-full h-56 object-cover"
                              onerror="this.src='https://placehold.co/600x400/8c9ea3/FFFFFF?text=Erro+ao+carregar+imagem'">
                         <div class="p-6">
@@ -162,10 +156,11 @@
                             <span class="text-lg font-semibold text-blue-700">A partir de R$ 380/noite</span>
                         </div>
                     </div>
-                    
-                    <!-- Cartão Suíte Master - Usei a Imagem 3 (suíte com cama e banheira) aqui --><div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-xl md:col-span-2 lg:col-span-1">
-                        <img src="img/suite 1.jpg" 
-                             alt="[Imagem da suíte master luxuosa com sala de estar e banheira]" 
+
+                    <!-- Suíte Master -->
+                    <div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-xl md:col-span-2 lg:col-span-1">
+                        <img src="img/suite 1.jpg"
+                             alt="Suíte master luxuosa com sala de estar e banheira"
                              class="w-full h-56 object-cover"
                              onerror="this.src='https://placehold.co/600x400/667292/FFFFFF?text=Erro+ao+carregar+imagem'">
                         <div class="p-6">
@@ -178,46 +173,47 @@
             </div>
         </section>
 
-        <!-- ===== Seção Galeria ===== --><section id="galeria" class="py-20 lg:py-28 bg-gray-50">
-            <!-- ... (código da seção Galeria existente) ... -->
+        <!-- ===== Seção Galeria ===== -->
+        <section id="galeria" class="py-20 lg:py-28 bg-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto mb-12">
                     <span class="text-blue-600 font-semibold uppercase tracking-wider">Galeria</span>
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">
-                        Momentos no Paraíso
+                        Momentos no Descanso
                     </h2>
                     <p class="text-lg text-gray-600 mt-4">
-                        Explore as nossas instalações e a beleza que rodeia o Hotel Paraíso.
+                        Explore as nossas instalações e a beleza que rodeia o Hotel Descanso.
                     </p>
                 </div>
-                
-                <!-- Grid da Galeria - Usei suas imagens aqui --><div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div class="rounded-lg shadow-md overflow-hidden aspect-w-1 aspect-h-1">
-                        <img src="img/quarto.jpg" alt="[Imagem da área de jantar externa do hotel]" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/88b0bf/FFFFFF?text=Erro'">
+                        <img src="img/quarto.jpg" alt="Quarto do hotel" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/88b0bf/FFFFFF?text=Erro'">
                     </div>
                     <div class="rounded-lg shadow-md overflow-hidden aspect-w-1 aspect-h-1">
-                        <img src="img/quarto2.jpg" alt="[Imagem do restaurante interno do hotel]" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/c9d6de/FFFFFF?text=Erro'">
+                        <img src="img/quarto2.jpg" alt="Quarto familiar" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/c9d6de/FFFFFF?text=Erro'">
                     </div>
                     <div class="rounded-lg shadow-md overflow-hidden aspect-w-1 aspect-h-1">
-                        <img src="img/suite 1.jpg" alt="[Imagem da banheira de hidromassagem decorada com pétalas]" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/f0f4f8/FFFFFF?text=Erro'">
+                        <img src="img/suite 1.jpg" alt="Suíte com banheira de hidromassagem" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/f0f4f8/FFFFFF?text=Erro'">
                     </div>
                     <div class="rounded-lg shadow-md overflow-hidden aspect-w-1 aspect-h-1">
-                        <img src="img/suite2.jpg" alt="[Imagem de uma suíte de luxo com cama de casal e banheira]" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/7c98b3/FFFFFF?text=Erro'">
+                        <img src="img/suite2.jpg" alt="Suíte de luxo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/7c98b3/FFFFFF?text=Erro'">
                     </div>
                     <div class="rounded-lg shadow-md overflow-hidden aspect-w-1 aspect-h-1 col-span-2">
-                        <img src="img/Refeitorio.jpg" alt="[Imagem da recepção do hotel com área de estar]" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/1000x500/accbe1/FFFFFF?text=Erro'">
+                        <img src="img/Refeitorio.jpg" alt="Refeitório do hotel" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/1000x500/accbe1/FFFFFF?text=Erro'">
                     </div>
                     <div class="rounded-lg shadow-md overflow-hidden aspect-w-1 aspect-h-1">
-                        <img src="img/Refeitorio2.jpg" alt="[Imagem de um quarto com várias camas de solteiro]" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/a3bace/FFFFFF?text=Erro'">
+                        <img src="img/Refeitorio2.jpg" alt="Área de refeições" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/a3bace/FFFFFF?text=Erro'">
                     </div>
                     <div class="rounded-lg shadow-md overflow-hidden aspect-w-1 aspect-h-1">
-                        <img src="img/estacionamento.jpg" alt="[Imagem da piscina iluminada à noite (placeholder)]" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/536b78/FFFFFF?text=Erro'">
+                        <img src="img/estacionamento.jpg" alt="Estacionamento do hotel" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" onerror="this.src='https://placehold.co/500x500/536b78/FFFFFF?text=Erro'">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== Seção Reservas ===== --><section id="reservas" class="py-20 lg:py-28 bg-blue-700 text-white">
+        <!-- ===== Seção Reservas ===== -->
+        <section id="reservas" class="py-20 lg:py-28 bg-blue-700 text-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold mt-2">
@@ -227,30 +223,37 @@
                         Garanta sua estadia conosco preenchendo o formulário abaixo. Entraremos em contato em breve para confirmar.
                     </p>
                 </div>
-                
-                <!-- Formulário de Reserva --><form id="booking-form" class="max-w-3xl mx-auto bg-white text-gray-800 p-8 sm:p-10 rounded-lg shadow-2xl">
+
+                <!-- Formulário de Reserva -->
+                <form id="booking-form" class="max-w-3xl mx-auto bg-white text-gray-800 p-8 sm:p-10 rounded-lg shadow-2xl">
                     <div class="grid md:grid-cols-2 gap-6">
-                        <!-- Check-in --><div>
+
+                        <!-- Check-in -->
+                        <div>
                             <label for="checkin" class="block text-sm font-medium text-gray-700 mb-2">Check-in</label>
                             <input type="date" id="checkin" name="checkin" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
-                        
-                        <!-- Check-out --><div>
+
+                        <!-- Check-out -->
+                        <div>
                             <label for="checkout" class="block text-sm font-medium text-gray-700 mb-2">Check-out</label>
                             <input type="date" id="checkout" name="checkout" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
-                        
-                        <!-- Adultos --><div>
+
+                        <!-- Adultos -->
+                        <div>
                             <label for="adultos" class="block text-sm font-medium text-gray-700 mb-2">Adultos</label>
                             <input type="number" id="adultos" name="adultos" min="1" value="2" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
 
-                        <!-- Crianças --><div>
+                        <!-- Crianças -->
+                        <div>
                             <label for="criancas" class="block text-sm font-medium text-gray-700 mb-2">Crianças</label>
                             <input type="number" id="criancas" name="criancas" min="0" value="0" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
-                        
-                        <!-- Tipo de Quarto --><div class="md:col-span-2">
+
+                        <!-- Tipo de Quarto -->
+                        <div class="md:col-span-2">
                             <label for="quarto" class="block text-sm font-medium text-gray-700 mb-2">Tipo de Quarto</label>
                             <select id="quarto" name="quarto" class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                                 <option value="standard">Quarto Familiar / Standard</option>
@@ -259,76 +262,45 @@
                             </select>
                         </div>
 
-                        <!-- Nome --><div class="md:col-span-2">
+                        <!-- Nome -->
+                        <div class="md:col-span-2">
                             <label for="nome" class="block text-sm font-medium text-gray-700 mb-2">Nome Completo</label>
                             <input type="text" id="nome" name="nome" placeholder="Seu nome" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
-                        
-                        <!-- Email --><div class="md:col-span-2">
+
+                        <!-- Email -->
+                        <div class="md:col-span-2">
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
                             <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
 
-                        <!-- Botão Enviar --><div class="md:col-span-2 text-center mt-4">
+                        <!-- Botão Enviar -->
+                        <div class="md:col-span-2 text-center mt-4">
                             <button type="submit" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-12 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
                                 Enviar Pedido de Reserva
                             </button>
                         </div>
                     </div>
                 </form>
-                
-                <!-- Mensagem de sucesso (oculta por padrão) --><div id="success-message" class="hidden max-w-3xl mx-auto mt-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center" role="alert">
+
+                <!-- Mensagem de sucesso -->
+                <div id="success-message" class="hidden max-w-3xl mx-auto mt-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center" role="alert">
                     <strong class="font-bold">Obrigado!</strong>
                     <span class="block sm:inline"> Seu pedido de reserva foi enviado com sucesso. Entraremos em contato em breve.</span>
                 </div>
-
-                <!-- ===== [NOVO] Funcionalidade Gemini API ===== -->
-                <div id="gemini-itinerary" class="hidden max-w-3xl mx-auto mt-10 bg-white text-gray-800 p-8 sm:p-10 rounded-lg shadow-2xl">
-                    <h3 class="text-2xl font-bold text-center text-blue-700 mb-6">
-                        ✨ Prepare a sua Estadia!
-                    </h3>
-                    <p class="text-center text-gray-600 mb-6">
-                        Gostaria de um roteiro personalizado para a sua visita? Diga-nos os seus interesses e a nossa IA criará um plano especial para si.
-                    </p>
-
-                    <div class="space-y-4">
-                        <div>
-                            <label for="interesses" class="block text-sm font-medium text-gray-700 mb-2">Seus Interesses</label>
-                            <input type="text" id="interesses" name="interesses" placeholder="Ex: relaxamento, gastronomia, aventura, família" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        
-                        <div class="text-center">
-                            <button id="generate-btn" class="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-12 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
-                                Gerar Roteiro
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- [NOVO] Resultado e Loading -->
-                    <div id="loading-spinner" class="hidden text-center text-gray-600 py-6">
-                        <svg class="animate-spin h-8 w-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        <p class="mt-3 font-medium">Aguarde, a gerar o seu roteiro mágico...</p>
-                    </div>
-
-                    <div id="itinerary-result" class="mt-6">
-                        <!-- O resultado da API Gemini será inserido aqui -->
-                    </div>
-                </div>
-                <!-- ======================================= -->
-
             </div>
         </section>
+
     </main>
 
-    <!-- ===== Rodapé ===== --><footer class="bg-gray-800 text-gray-300 py-16">
-        <!-- ... (código do rodapé existente) ... -->
+    <!-- ===== Rodapé ===== -->
+    <footer class="bg-gray-800 text-gray-300 py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-12">
-                <!-- Sobre (Rodapé) --><div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Hotel Paraíso</h3>
+
+                <!-- Sobre (Rodapé) -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Hotel Descanso</h3>
                     <p class="text-gray-400 mb-4">
                         O seu destino de luxo para relaxamento e conforto.
                     </p>
@@ -337,8 +309,9 @@
                         Praia Dourada, PD 12345-678
                     </p>
                 </div>
-                
-                <!-- Links Rápidos --><div>
+
+                <!-- Links Rápidos -->
+                <div>
                     <h4 class="text-lg font-semibold text-white uppercase tracking-wider mb-4">Links Rápidos</h4>
                     <nav class="flex flex-col space-y-2">
                         <a href="#sobre" class="text-gray-400 hover:text-white transition-colors">Sobre Nós</a>
@@ -347,14 +320,15 @@
                         <a href="#reservas" class="text-gray-400 hover:text-white transition-colors">Reservas</a>
                     </nav>
                 </div>
-                
-                <!-- Contato e Redes Sociais --><div>
+
+                <!-- Contato e Redes Sociais -->
+                <div>
                     <h4 class="text-lg font-semibold text-white uppercase tracking-wider mb-4">Contato</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>Email: <a href="mailto:contato@hotelparaiso.com" class="hover:text-white">contato@hotelparaiso.com</a></li>
+                        <li>Email: <a href="mailto:contato@hoteldescanso.com" class="hover:text-white">contato@hoteldescanso.com</a></li>
                         <li>Telefone: <a href="tel:+5511999998888" class="hover:text-white">+55 (11) 99999-8888</a></li>
                     </ul>
-                    <!-- Redes Sociais --><div class="flex space-x-4 mt-6">
+                    <div class="flex space-x-4 mt-6">
                         <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
                         </a>
@@ -367,189 +341,18 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Copyright --><div class="border-t border-gray-700 mt-12 pt-8 text-center">
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
                 <p class="text-gray-400 text-sm">
-                    &copy; 2025 Hotel Paraíso. Todos os direitos reservados.
+                    &copy; 2025 Hotel Descanso. Todos os direitos reservados.
                 </p>
             </div>
         </div>
     </footer>
-    
-    <!-- Script para Menu Móvel e Formulário --><script>
-        // --- Controle do Menu Móvel ---
-        const burgerBtn = document.getElementById('burger-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        burgerBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Fecha o menu móvel ao clicar em um link
-        mobileMenu.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') {
-                mobileMenu.classList.add('hidden');
-            }
-        });
 
-        // --- Controle do Formulário de Reserva ---
-        const bookingForm = document.getElementById('booking-form');
-        const successMessage = document.getElementById('success-message');
-        const geminiSection = document.getElementById('gemini-itinerary'); // [NOVO]
-
-        bookingForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Impede o envio real do formulário
-            
-            // Simulação de envio
-            // Em um projeto real, você enviaria os dados para um servidor (backend) aqui
-            
-            // Exibe a mensagem de sucesso
-            successMessage.classList.remove('hidden');
-            
-            // [NOVO] Exibe a secção da API Gemini
-            geminiSection.classList.remove('hidden');
-            
-            // Opcional: limpa o formulário
-            // bookingForm.reset(); // Desativado para podermos usar os dados no Gemini
-            
-            // Opcional: esconde a mensagem após alguns segundos
-            setTimeout(() => {
-                successMessage.classList.add('hidden');
-            }, 5000); // Esconde após 5 segundos
-        });
-
-        // --- [NOVO] Lógica da API Gemini ---
-
-        // Elementos da UI do Gemini
-        const generateBtn = document.getElementById('generate-btn');
-        const interestsInput = document.getElementById('interesses');
-        const loadingSpinner = document.getElementById('loading-spinner');
-        const itineraryResult = document.getElementById('itinerary-result');
-
-        // Chave de API (deixe em branco, será fornecida pelo ambiente)
-        const apiKey = "";
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-
-        /**
-         * Função de espera para o backoff exponencial.
-         */
-        function delay(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
-        /**
-         * Wrapper de Fetch com backoff exponencial.
-         */
-        async function fetchWithBackoff(url, options, retries = 3, backoff = 1000) {
-            try {
-                const response = await fetch(url, options);
-                if (!response.ok) {
-                    if (response.status === 429 && retries > 0) { // Erro 429: Too Many Requests
-                        await delay(backoff);
-                        return fetchWithBackoff(url, options, retries - 1, backoff * 2);
-                    }
-                    throw new Error(`Erro na API: ${response.statusText}`);
-                }
-                return response.json();
-            } catch (error) {
-                if (retries > 0) {
-                    await delay(backoff);
-                    return fetchWithBackoff(url, options, retries - 1, backoff * 2);
-                }
-                throw error;
-            }
-        }
-
-        /**
-         * Chama a API Gemini para gerar conteúdo.
-         */
-        async function callGeminiAPI(prompt) {
-            const payload = {
-                contents: [{ 
-                    parts: [{ text: prompt }] 
-                }],
-                // (Opcional) Configurações de segurança para evitar respostas indesejadas
-                safetySettings: [
-                    { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
-                    { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
-                    { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
-                    { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_MEDIUM_AND_ABOVE" }
-                ]
-            };
-
-            try {
-                const result = await fetchWithBackoff(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                // Extrai o texto da resposta
-                if (result.candidates && result.candidates.length > 0 && 
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) 
-                {
-                    return result.candidates[0].content.parts[0].text;
-                } else {
-                    throw new Error("Resposta da API inválida ou vazia.");
-                }
-
-            } catch (error) {
-                console.error("Erro ao chamar a API Gemini:", error);
-                throw error; // Propaga o erro para ser tratado pelo chamador
-            }
-        }
-
-        /**
-         * Event Listener para o botão "Gerar Roteiro".
-         */
-        generateBtn.addEventListener('click', async () => {
-            // 1. Mostrar loading e limpar resultados anteriores
-            loadingSpinner.classList.remove('hidden');
-            itineraryResult.innerHTML = '';
-            itineraryResult.classList.remove('gemini-response', 'text-red-600'); // Limpa estilos de erro/sucesso
-
-            // 2. Obter dados do formulário
-            const checkin = document.getElementById('checkin').value;
-            const checkout = document.getElementById('checkout').value;
-            const adultos = document.getElementById('adultos').value;
-            const criancas = document.getElementById('criancas').value;
-            const interesses = interestsInput.value || "relaxamento e boa comida"; // Valor padrão
-
-            // 3. Criar o prompt para a API
-            const prompt = `
-                Aja como um concierge 5 estrelas do "Hotel Paraíso".
-                
-                Um grupo de ${adultos} adultos e ${criancas} crianças ficará hospedado de ${checkin} até ${checkout}.
-                Os seus interesses principais são: ${interesses}.
-
-                Crie um roteiro sugerido para a estadia. 
-                - Inclua atividades no hotel (como as do nosso spa, piscina e restaurante) e atrações locais próximas (praias, trilhas, cidade).
-                - Seja amigável, acolhedor e profissional.
-                - Organize por dia (ex: Dia 1: Chegada e Relaxamento, Dia 2: Aventura, etc.).
-                - Use formatação simples com cabeçalhos (ex: **Dia 1**) e listas com marcadores (* Atividade).
-                - Mantenha a resposta concisa e útil.
-            `;
-
-            // 4. Chamar a API e tratar a resposta
-            try {
-                const responseText = await callGeminiAPI(prompt);
-                
-                // 5. Exibir o resultado
-                loadingSpinner.classList.add('hidden');
-                itineraryResult.classList.add('gemini-response'); // Adiciona classe para formatar
-                itineraryResult.textContent = responseText; // Usamos textContent por segurança
-
-            } catch (error) {
-                // 6. Exibir erro
-                loadingSpinner.classList.add('hidden');
-                itineraryResult.classList.add('text-red-600', 'font-medium', 'text-center');
-                itineraryResult.textContent = "Desculpe, ocorreu um erro ao tentar gerar o seu roteiro. Por favor, tente novamente mais tarde.";
-            }
-        });
-
-    </script>
+    <!-- JavaScript próprio -->
+    <script src="script.js"></script>
 
 </body>
 </html>
-

@@ -1,0 +1,10 @@
+/* ===== Fonte padrão ===== */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ===== Acessibilidade de foco ===== */
+:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
